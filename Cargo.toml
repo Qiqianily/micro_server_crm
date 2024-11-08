@@ -1,4 +1,10 @@
 [workspace]
+members = ["crm"]
 
 resolver = "2"
-members = ["crm"]
+
+[workspace.dependencies]
+anyhow = "1.0.93"
+prost = "0.13.3"
+prost-build = "0.13.3"
+prost-types = "0.13.3"
