@@ -1,5 +1,5 @@
 use anyhow::Result;
-use crm::User;
+use crm::pb::User;
 use prost::Message;
 
 fn main() -> Result<()> {
