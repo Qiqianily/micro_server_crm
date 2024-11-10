@@ -1,5 +1,5 @@
 [workspace]
-members = ["crm", "user_stat"]
+members = ["crm", "crm_metadata", "crm_send", "user_stat"]
 
 resolver = "2"
 

@@ -192,7 +192,7 @@ mod tests {
             .time_stamps(time_stamps)
             .id(("viewed_but_not_started".to_string(), id(&[252790])))
             .build()
-            .unwrap();
+            .expect("Failed to build query request");
         println!("generated query: {:?}", query);
         let mut stream = svc.query(query).await?.into_inner();
         while let Some(res) = stream.next().await {
