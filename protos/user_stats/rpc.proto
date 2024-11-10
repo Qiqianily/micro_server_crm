@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package user_stats;
+
+// 引入其他proto文件
+import "user_stats/messages.proto";
+
+service UserStats {
+    // 查询请求，传入参数 返回一个流
+    rpc Query(QueryRequest) returns (stream User){};
+    // 原始字符串查询
+    rpc RawQuery(RawQueryRequest) returns (stream User){};
+}

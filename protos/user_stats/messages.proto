@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package user_stats;
+
+import "google/protobuf/timestamp.proto";
+// 用户信息
+message User {
+    string email = 1;
+    string name = 2;
+}
+// 时间查询条件
+message TimeQuery {
+  google.protobuf.Timestamp lower = 1;
+  google.protobuf.Timestamp upper = 2;
+}
+// ID查询 支持批量
+message IdQuery {
+  repeated uint32 ids = 1;
+}
+// 查询请求参数
+message QueryRequest {
+  // 时间查询条件 例如 created_at, last_visited_at等 -> Option<HashMap<String,TimeQuery>>
+    map<string, TimeQuery> timeStamps = 1;
+  // ID查询条件 -> Option<HashMap<String,IdQuery>>
+    map<string, IdQuery> ids = 2;
+}
+
+// 原始查询请求
+message RawQueryRequest {
+    string query = 1;
+}
+
+// 查询响应
+message QueryResponse {
+  repeated User users = 1;
+}
