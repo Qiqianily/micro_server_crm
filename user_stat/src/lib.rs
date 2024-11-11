@@ -3,6 +3,7 @@ mod config;
 pub mod pb;
 
 pub use config::AppConfig;
+
 use futures::Stream;
 use pb::{
     user_stats_server::{UserStats, UserStatsServer},

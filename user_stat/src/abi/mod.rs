@@ -1,3 +1,7 @@
+use crate::{
+    pb::{QueryRequest, QueryRequestBuilder, RawQueryRequest, TimeQuery, User},
+    ResponseStream, ServiceResult, UserStatsService,
+};
 use chrono::{DateTime, TimeZone, Utc};
 use core::fmt;
 use itertools::Itertools;
@@ -5,11 +9,6 @@ use prost_types::Timestamp;
 use std::collections::HashMap;
 use tonic::{Response, Status};
 use tracing::info;
-
-use crate::{
-    pb::{QueryRequest, QueryRequestBuilder, RawQueryRequest, TimeQuery, User},
-    ResponseStream, ServiceResult, UserStatsService,
-};
 
 // 实现UserStatsService内部函数
 impl UserStatsService {

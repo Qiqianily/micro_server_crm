@@ -8,6 +8,7 @@ use tonic::{Response, Status};
 mod abi;
 pub mod config;
 pub mod pb;
+pub use abi::Tpl;
 
 type ServiceResult<T> = Result<Response<T>, Status>;
 type ResponseStream = Pin<Box<dyn Stream<Item = Result<Content, Status>> + Send>>;

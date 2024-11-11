@@ -354,6 +354,31 @@ dependencies = [
 [[package]]
 name = "crm_send"
 version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "chrono",
+ "crm_metadata",
+ "crm_send",
+ "derive_builder",
+ "fake",
+ "futures",
+ "itertools",
+ "nanoid",
+ "prost",
+ "prost-types",
+ "proto-builder-trait",
+ "rand",
+ "serde",
+ "serde_yaml",
+ "sqlx",
+ "tokio",
+ "tokio-stream",
+ "tonic",
+ "tonic-build",
+ "tracing",
+ "tracing-subscriber",
+ "uuid",
+]
 
 [[package]]
 name = "crossbeam-queue"
@@ -2625,6 +2650,7 @@ dependencies = [
  "tracing",
  "tracing-subscriber",
  "user_stat",
+ "uuid",
 ]
 
 [[package]]

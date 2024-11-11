@@ -18,7 +18,15 @@ serde_json = "1.0.89"
 chrono = {version = "0.4.38", features = ["serde"]}
 sqlx = { version = "0.8.2",features = ["runtime-tokio","postgres","tls-rustls","chrono"] }
 tracing = "0.1.40"
+rand = "0.8.5"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 itertools = "0.13.0"
 futures = "0.3.30"
-user_stat = { path = "./user_stat" }
+tokio-stream = "0.1.16"
+uuid = { version = "1.10.0", features = ["v4"] }
+fake = { version = "3.0.1",features = ["derive", "chrono"]}
+proto-builder-trait = "0.6.2"
+nanoid = "0.4.0"
+user_stat = { path = "user_stat" }
+crm_metadata = { path = "crm_metadata" }
+crm_send = { path = "crm_send" }
